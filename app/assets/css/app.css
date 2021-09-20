@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --balloon-move: 20px;
+  --balloon-border-radius: 25;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /*background-color: #1b1c22;*/
+  background: url(../images/bkgd.png) no-repeat;
+  background-size: cover;
+  -webkit-app-region: drag;
+  color: white;
+}
+
+.bg-primary {
+  background-color: #25262c;
+}
+
+.bg-2 {
+  background-color: #191a1f;
+}
+
+.text-medium {
+  font-size: 15px;
+}
+
+.bg-b-2 {
+  background-color: rgba(14, 14, 16, 0.75);
+
+}
+
+.color-gray {
+  color: #525356;
+}
+
+.color-gray-2 {
+  color: #6a6b6f;
+}
+
+input::placeholder {
+  color: #525356;
+}
+
+input {
+  background-color: #222222;
+}
+
+.no-drag, button, a, input {
+  -webkit-app-region: no-drag;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  background-color: #222222;
+  padding: 8px;
+  border-radius: 3px;
+  position: relative;
+}
+
+input[type=checkbox]:checked {
+  background-color: #2563EB;
+}
+
+.color-blue-primary {
+  color: #3c50fa;
+}
+
+.bg-blue-primary {
+  background-color: #3c50fa;
+}
+
+nav {
+  font-size: 16px;
+}
+
+/* Settings */
+
+input[selected] {
+  color: white;
+  background-color: #2563EB;
+}
+
+/* Range Slider styles. */
+.rangeSlider {
+  width: 35%;
+  height: 5px;
+  margin: 15px 0px;
+  background: grey;
+  border-radius: 3px;
+  position: relative;
+}
+.rangeSliderBar {
+  position: absolute;
+  background: #8be88b;
+  width: 50%;
+  height: 5px;
+  border-radius: 3px 0px 0px 3px;
+  transition: background 0.25s ease;
+}
+.rangeSliderTrack {
+  position: absolute;
+  top: -7.5px;
+  width: 7px;
+  height: 20px;
+  background: white;
+  border-radius: 3px;
+  left: 50%;
+  cursor: ew-resize;
+}

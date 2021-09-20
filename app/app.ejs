@@ -1,0 +1,28 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'sha256-In6B8teKZQll5heMl9bS7CESTbGvuAt3VVV86BUQBDk='" />
+    <title>Crystal Client</title>
+    <script src="./assets/js/scripts/uicore.js"></script>
+    <script src="./assets/js/scripts/uibinder.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/balloon.css">
+</head>
+
+    <body>
+        <div id="main">
+            <%- include('frame') %>
+            <%- include('settings') %>
+            <%- include('landing') %>
+            <%- include('servers') %>
+            <%- include('overlay') %>
+        </div>
+    </body>
+</html>

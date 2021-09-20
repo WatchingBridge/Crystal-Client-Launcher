@@ -1,0 +1,184 @@
+<div id="settingsContainer" style="display: none;">
+    <div id="app" class="mt-6">
+        <!-- HEADER -->
+        <div class="flex flex-1 flex-row items-center justify-between ml-16 mr-32">
+            <!-- NAV -->
+            <nav id="nav" class="flex flex-1 text-medium items-center flex-row space-x-6 font-bold color-gray text-sm">
+                <div class="no-drag"><a href="#" id="home">Home</a></div>
+                <div class="no-drag bg-blue-primary text-white px-8 py-2 rounded-full nav-btn-active"><a href="#"
+                        id="settings">Settings</a></div>
+                <div class="no-drag"><a href="#" id="store" data-src="https://store.crystalclient.net">Store</a></div>
+            </nav>
+        </div>
+        <!-- MAIN CONTENT -->
+        <div class="mx-16 mt-10">
+            <!-- LOGO -->
+            <div class="flex flex-row flex-1 items-center space-x-4">
+                <img src="https://media.discordapp.net/attachments/843147834597310484/848332886217588796/icon.png"
+                    alt="" class="w-36">
+                <div class="text-3xl uppercase font-bold tracking-widest">
+                    <div class="flex flex-col">
+                        <div>crystal</div>
+                        <div>client</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-1 flex-row mt-10 space-x-8">
+                <div class="pr-5 border-r-4 servers-border">
+                    <div class="flex flex-col flex-1 space-y-4 mt-4">
+                        <button rSc="settingsTabMinecraft"
+                            class="no-drag settingsNavItem outline-none focus:outline-none text-medium color-gray-2 px-8 py-2 font-bold rounded-lg hover:opacity-50 transition-opacity"
+                            selected>Minecraft</button>
+                        <button rSc="settingsTabJava"
+                            class="no-drag settingsNavItem outline-none focus:outline-none text-medium color-gray-2 px-8 py-2 font-bold rounded-lg hover:opacity-50 transition-opacity">Java</button>
+                    </div>
+                </div>
+                <div class="settings-content">
+<!--                     MINECRAFT CODE -->
+                    <div id="settingsTabMinecraft" class="settingsTab">
+                        <div class="flex flex-row flex-1 justify-between">
+                            <div class="text-white text-2xl font-medium tracking-wide">Minecraft Settings</div>
+                        </div>
+                        <div class="mt-4 bg-primary px-5 py-5 rounded-lg shadow">
+                            <div>
+                                <div class="flex flex-1 flex-row space-x-3 items-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <h1 class="text-lg font-bold">Game Resolution</h1>
+                                    </div>
+                                </div>
+                                <div class="mt-3 flex flex-1 items-center flex-row space-x-4">
+                                    <input type="number" value="1280" id="settingsGameWidth" cValue="GameWidth" min="0"
+                                        class="outline-none text-center border-none py-2 px-2 w-16 text-sm color-gray rounded-lg">
+                                    <div class="font-bold color-gray">X</div>
+                                    <input type="number" value="720" id="settingsGameHeight" min="0" cValue="GameHeight"
+                                        class="outline-none text-center border-none py-2 px-2 w-16 text-sm color-gray rounded-lg">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex flex-1 flex-row items-center">
+                                    <input class="border-none outline-none mr-3 shadow" cValue="Fullscreen" type="checkbox">
+                                    <span class="color-gray-2">Launch in fullscreen</span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex flex-1 flex-row items-center">
+                                    <input class="border-none outline-none mr-3 shadow" cValue="LaunchDetached" type="checkbox">
+                                    <span class="color-gray-2">Launch game process detached from launcher</span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="flex flex-1 flex-row items-center">
+                                    <input class="border-none outline-none mr-3 shadow" cValue="HideLauncher" type="checkbox">
+                                    <span class="color-gray-2">Hide launcher on game launch</span>
+                                </div>
+                            </div>
+                            <div id="settingsJVMOptsContainer" class="mt-4">
+                                <div class="flex flex-1 flex-row space-x-3 items-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <h1 class="text-lg font-bold w-full">JVM Options</h1>
+                                    </div>
+                                </div>
+                                <div id="settingsJVMOptsContent">
+                                    <input id="settingsJVMOptsVal" class="px-2 py-2 rounded-lg" cValue="JVMOptions" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- JAVA CODE -->
+                    <div id="settingsTabJava" class="settingsTab" style="display: none;">
+                        <div class="flex flex-row flex-1 justify-between">
+                            <div class="text-white text-2xl font-medium tracking-wide">Java Settings</div>
+                        </div>
+                        <div class="mt-4 bg-primary px-5 py-5 rounded-lg shadow">
+                            <div id="settingsMemoryContainer">
+                                <div class="flex flex-1 flex-row space-x-3 items-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <h1 class="text-lg font-bold">Game Memory</h1>
+                                    </div>
+                                </div>
+                                <div id="settingsMemoryContent" class="mt-4 no-drag">
+                                    <div id="settingsMemoryContentLeft">
+                                        <div class="settingsMemoryContentItem">
+                                            <span class="settingsMemoryHeader font-medium color-gray">Maximum RAM</span>
+                                            <div class="settingsMemoryActionContainer flex flex-1 flex-row items-center space-x-2">
+                                                <div id="settingsMaxRAMRange" class="rangeSlider" cValue="MaxRAM" min="3" max="8"
+                                                    value="3" step="0.5">
+                                                    <div class="rangeSliderBar"></div>
+                                                    <div class="rangeSliderTrack"></div>
+                                                </div>
+                                                <span id="settingsMaxRAMLabel" class="settingsMemoryLabel">3G</span>
+                                            </div>
+                                        </div>
+                                        <div class="settingsMemoryContentItem">
+                                            <span class="settingsMemoryHeader font-medium color-gray">Minimum RAM</span>
+                                            <div class="settingsMemoryActionContainer flex flex-1 flex-row items-center space-x-2">
+                                                <div id="settingsMinRAMRange" class="rangeSlider" cValue="MinRAM" min="3" max="8"
+                                                    value="3" step="0.5">
+                                                    <div class="rangeSliderBar"></div>
+                                                    <div class="rangeSliderTrack"></div>
+                                                </div>
+                                                <span id="settingsMinRAMLabel" class="settingsMemoryLabel">3G</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingsFileSelContainer mt-4">
+                                <div class="flex flex-1 flex-row space-x-3 items-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <h1 class="text-lg font-bold">Java Path</h1>
+                                    </div>
+                                </div>
+                                <div class="settingsFileSelContent mt-4">
+                                    <div id="settingsJavaExecDetails">Selected: Java 8 Update 172 (x64)</div>
+                                    <div class="settingsFileSelActions">
+                                        <input class="settingsFileSelVal px-2 py-2 rounded-lg" id="settingsJavaExecVal" type="text" value="null"
+                                            cValue="JavaExecutable" disabled>
+                                        <button class="settingsFileSelButton ml-2 px-4 py-2 bg-blue-primary shadow-sm outline-none foucs:outline-none text-white rounded-lg" id="settingsJavaExecSel"
+                                            dialogTitle="Select Java Executable" dialogDirectory="false">Choose File</button>
+                                    </div>
+                                </div>
+                                <div class="settingsFileSelDesc text-sm color-gray-2 mt-2">The Java executable is validated before game launch.
+                                    <small>Requires
+                                        Java 8 x64.</small><br>The path should end with <small>bin<%= process.platform==='win32'
+                                            ? '\\javaw.exe' : '/java' %></small>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .settings-content {
+            width: 56rem;
+        }
+    </style>
+    <script src="./assets/js/scripts/settings.js"></script>
+</div>

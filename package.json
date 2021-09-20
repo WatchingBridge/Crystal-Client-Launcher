@@ -1,0 +1,35 @@
+{
+  "name": "crystal-client-launcher",
+  "version": "1.0.0",
+  "productName": "Crystal Client Launcher",
+  "description": "Modded Minecraft Launcher",
+  "author": "Crystal Development, LLC.",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "14.x.x"
+  },
+  "dependencies": {
+    "@electron/remote": "^1.2.0",
+    "adm-zip": "^0.5.5",
+    "async": "^3.2.0",
+    "axios": "^0.21.1",
+    "discord-rpc": "^3.2.0",
+    "ejs": "^3.1.6",
+    "ejs-electron": "^2.1.1",
+    "electron-updater": "^4.3.9",
+    "fs-extra": "^10.0.0",
+    "github-syntax-dark": "^0.5.0",
+    "jquery": "^3.6.0",
+    "minecraft-auth": "^1.0.27",
+    "msmc": "^2.2.0",
+    "nodejs-file-downloader": "^4.7.1",
+    "os": "^0.1.2",
+    "request": "^2.88.2",
+    "semver": "^7.3.5",
+    "systeminformation": "^5.8.6",
+    "tar-fs": "^2.1.1",
+    "user-home": "^3.0.0",
+    "winreg": "^1.2.4"
+  }
+}
